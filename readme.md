@@ -27,6 +27,16 @@ pnpm run dev
 - 后端：Express 5, MongoDB (Mongoose), TypeScript
 - 工具：pnpm, nodemon, ts-node
 
+## Dokcer 容器运行
+```
+docker-compose build --no-cache	—— 打包
+docker-compose up -d --build 		—— 一键启动打包的镜像容器（后端执行）
+docker-compose up --build			—— 一键启动打包的镜像容器（直接显示状态）
+
+docker-compose stop				—— 暂停容器
+docker-compose down -v			—— 删除容器和数据卷
+docker-compose down --rmi all 		——  删除之前打包的镜像
+```
 
 
 ## 注意事项
