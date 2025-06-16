@@ -1,10 +1,13 @@
 import React, { useEffect, useState } from 'react'
 
 export default function App() {
+  const serverPath = 'http://localhost:3000'
+
   const [msg, setMsg] = useState('')
 
   useEffect(() => {
-    fetch('http://localhost:4000/api/hello')
+    fetch(`${serverPath}/api/hello`)
+    // fetch('http://localhost:4000/api/hello')
       .then(res => res.json())
       .then(data => setMsg(data.message))
       .catch(() => setMsg('请求失败'))
